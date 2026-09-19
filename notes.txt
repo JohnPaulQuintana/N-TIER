@@ -1,0 +1,51 @@
+Using toml as requirements
+command: python -m pip install -e . # -e = editable installation
+
+
+N-TIER/
+│
+├── main.py
+│   # Application entry point.
+│   # Creates the FastAPI application and assembles the backend.
+│   # Registers routers, middleware, exception handlers, startup/shutdown, etc.
+│
+├── config/
+│   # Application configuration.
+│   # Handles environment variables, application settings,
+│   # logging configuration, constants, and similar configuration concerns.
+│
+├── api/
+│   # API / HTTP layer.
+│   # Handles incoming HTTP requests and outgoing HTTP responses.
+│   # Contains routes/controllers and API-level dependencies.
+│   # Should NOT contain complex business logic or database queries.
+│
+├── services/
+│   # Business logic / use-case layer.
+│   # Defines what the application should actually do.
+│   # Coordinates workflows, business rules, and other components.
+│   # Should NOT be responsible for directly writing SQL queries.
+│
+├── repositories/
+│   # Data-access layer.
+│   # Responsible for retrieving and modifying data in the database.
+│   # Contains database queries and SQLAlchemy data-access operations.
+│   # Service decides WHAT data is needed; repository handles HOW to get it.
+│
+├── models/
+│   # Database / ORM models.
+│   # Defines how application objects are mapped to database tables.
+│   # Usually contains SQLAlchemy models and relationships.
+│
+├── schemas/
+│   # Data contracts / validation layer.
+│   # Defines the structure of data coming into and going out of the API.
+│   # Usually contains Pydantic schemas such as UserCreate and UserResponse.
+│
+└── database/
+    # Database infrastructure.
+    # Handles database engine, sessions, Base, connections,
+    # transactions, and other database setup/infrastructure.
+
+
+1. Setup database using alembic

@@ -1,0 +1,4 @@
+# API / HTTP layer.
+# Handles incoming HTTP requests and outgoing HTTP responses.
+# Contains routes/controllers and API-level dependencies.
+# Should NOT contain complex business logic or database queries.

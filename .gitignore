@@ -1,0 +1,133 @@
+# =========================
+
+# Python
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+*.so
+
+# Python virtual environment
+
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
+
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# =========================
+
+# Environment / Secrets
+
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# Private keys / certificates
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+# =========================
+
+# IDE / Editors
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# Testing / Coverage
+
+# =========================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+logs/
+
+# =========================
+
+# OS Files
+
+# =========================
+
+# Windows
+
+Thumbs.db
+Desktop.ini
+
+# macOS
+
+.DS_Store
+
+# Linux
+
+*~
+
+# =========================
+
+# Local Database / Data
+
+# =========================
+
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+
+# Alembic
+
+# =========================
+
+# Keep migration files tracked.
+
+# Do NOT ignore alembic/versions/
+
+# =========================
+
+# Temporary Files
+
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.cache
+tmp/
+temp/
+EOF
