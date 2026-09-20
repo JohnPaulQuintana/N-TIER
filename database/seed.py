@@ -103,6 +103,7 @@ def seed_admin(db):
 
     if not admin_user:
         admin_user = User(
+            full_name="Administrator",
             email=settings.admin_email,
             password_hash=hash_password(
                 settings.admin_password,
